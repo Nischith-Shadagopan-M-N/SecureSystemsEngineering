@@ -1,0 +1,127 @@
+0x0804cfb7 : adc al, 0xe8 ; push ebx ; ret
+
+0x080b8035 : inc eax ; pop eax ; ret
+
+0x080b6039 : inc edx ; pop eax ; add esp, 8 ; pop ebx ; ret
+
+0x080b8036 : pop eax ; ret
+
+0x080b7fd6 : push eax ; ret
+
+0x0804cfb9 : push ebx ; ret
+
+0x080481c9 : pop ebx ; ret
+
+0x080e1ec5 : push ecx ; ret
+
+0x080de8b5 : pop ecx ; ret
+
+0x080ddeaf : dec ecx ; ret
+
+0x08063127 : imul byte ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+
+0x080630b8 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+
+0x08063126 : push esi ; imul byte ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+
+0x080630b7 : push esi ; imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+
+0x08053e71 : add dword ptr [ecx], edi ; ret
+
+6 -> glb
+-1 -> edi
+1 -> eax
+
+0x0804899d
+0x00000001
+0x080630b8
+0x080ea00a
+0x08048480
+0x08053e71
+0xffffffff
+0x08048480
+0x00000001
+0x080630b8
+0x080ea00a
+0x08048480
+0x08053e71
+0xffffffff
+0x08048480
+0x00000001
+0x080630b8
+0x080ea00a
+0x08048480
+0x08053e71
+0xffffffff
+0x08048480
+0x00000001
+0x080630b8
+0x080ea00a
+0x08048480
+0x08053e71
+0xffffffff
+0x08048480
+0x00000001
+0x080630b8
+0x080ea00a
+0x08048480
+0x00000001
+0x080b8036
+0x08053e71
+0x00000006
+0x08048480
+0x080eba20
+0x080de8b5
+
+
+
+
+
+
+
+
+
+imul glb
+0x80ea00a
+pop edi
+add glb, -1
+-1
+pop edi
+imul glb
+0x80ea00a
+pop edi
+add glb, -1
+-1
+pop edi
+imul glb
+0x80ea00a
+pop edi
+add glb, -1
+-1
+pop edi
+imul glb
+0x80ea00a
+pop edi
+add glb, -1
+-1
+pop edi
+imul glb
+0x80ea00a
+pop edi
+1
+pop eax
+add glb, 6
+6
+pop edi
+address of glb
+pop ecx
+
+locals.i = -0x49c(%ebp)
+locals.word_buf = -0x4a8(%ebp)
+locals.cat_pointer = -0x498(%ebp)
+locals.cat_buf = -0x4a8(%ebp)
+
+0x80eba20 - address of glb
+0x80ea00a - address of roll number
+
+ebp = 0xffffcdc8

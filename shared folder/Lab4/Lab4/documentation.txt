@@ -1,0 +1,11 @@
+First i found out the address of the GOT entry for printf. This can be found by disassembling the executable and checking the first line of printf@PLT. The first line will have a jmp statement to the GOT entry. The GOT entry address was found to be 0x5bc300c.
+
+In the dissassembly of the executable we can also find the address of buf. Then in gdb we can put a breakpoint at the call to printf and check the esp value. The difference between these two addresses is noted. This was found to be 28.
+
+28 = 7 * 4. So the 7th argument to printf should be the address to be modified. The got entry can be modified in two parts, two bytes at a time using %hn. We have to put the address of GOT and address of GOT + 2 as the 7th and 8th argument. Then we can make the number of characters to be whatever we need by using %nu which will increase the counter by n. So in this way we can fill two bytes at a time, first filling the smaller 2 bytes.
+
+The GOT entry corresponding to printf is changed with the address of system. Address of system can be found in gdb by doing "p system". This was found to be 0xf7e42940. So first time printf is called it runs properly and the GOT entry is filled. But then we change this GOT entry. So in the second iteration, when printf is called, system is called with the arguments given to printf. 
+
+Since the address of system function is machine dependant, I have written a python program to generate the exploit string. When run, the program asks for the address of system and it should be given in hexadecimal. For ex:
+$ python string.py 
+Enter address of system function in hexadecimal : f7e42940

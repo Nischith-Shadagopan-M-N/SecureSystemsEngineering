@@ -1,0 +1,30 @@
+0x080dc4e3 : add al, ch ; imul eax, dword ptr [eax], 0xf92d0800 ; call ebp
+0x080ac1c1 : fimul dword ptr [ecx - 0x7683dba4] ; retf
+0x0809f71a : fimul dword ptr [edi] ; popfd ; ret
+0x08063127 : imul byte ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+0x080630b8 : imul dword ptr [ecx] ; rcr byte ptr [edi + 0x5e], 1 ; pop ebx ; ret
+0x080dc621 : imul eax, dword ptr [eax], 0 ; lodsb al, byte ptr [esi] ; das ; stc ; call dword ptr [ecx]
+0x0808f264 : imul ebx, dword ptr [eax], 0x5b18c483 ; pop esi ; pop edi ; pop ebp ; ret
+0x080d665d : imul ecx, dword ptr [edx], 0xe ; adc al, 0x41 ; ret
+0x080d89e2 : imul ecx, dword ptr [edx], 0xe ; or al, 0x41 ; ret
+0x080e2f77 : imul ecx, dword ptr [edx], 0xe ; or al, 0x43 ; ret
+0x0806cf14 : imul edx, dword ptr [eax], 0x5e5b0003 ; pop edi ; pop ebp ; ret
+0x0808f055 : imul edx, edx, 0x3c ; pop ebx ; add eax, edx ; ret
+0x080b802f : add byte ptr [ebx - 0x74fbdbbc], cl ; inc eax ; pop eax ; ret
+0x080b7fdf : add byte ptr [ebx - 0x74fbdbbc], cl ; inc eax ; pop esp ; ret
+0x080d2d5e : dec esp ; pop eax ; retf
+
+//jumps
+0x0804fd89 : pushfd ; add byte ptr [eax], al ; add byte ptr [ebx + 0x5e], bl ; pop edi ; pop ebp ; ret
+0x08085e0c : pushfd ; add byte ptr [eax], al ; add byte ptr [ebx - 0x48743], al ; call dword ptr [eax]
+0x080ac67e : pushfd ; and al, 0x80 ; add byte ptr [eax], al ; add byte ptr [ecx], bh ; ret
+0x080d9d98 : pushfd ; inc edx ; add byte ptr [eax], al ; les eax, ptr [eax] ; clc ; jmp dword ptr [ebx]
+0x080b7572 : pushfd ; ret
+
+0x0809f71a : fimul dword ptr [edi] ; popfd ; ret
+0x080d23e8 : popfd ; jecxz 0x80d23a4 ; add dword ptr [edx - 0x36a5831f], esp ; retf
+0x0809f71c : popfd ; ret
+0x0809f71a : fimul dword ptr [edi] ; popfd ; ret
+
+0x080b7fc7 : add al, 0x89 ; push eax ; dec esp ; ret
+0x080b7fd3 : add al, 0x8b ; inc eax ; push eax ; ret
